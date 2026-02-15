@@ -7,10 +7,11 @@ using namespace std;
 struct Jugador{
     string nombre;
     int identificador;
+    int puntaje;
     Jugador* sig;
     Jugador* ant;
 };
-
+//clase 
 class Juego{
 private:
     Jugador* pInicio;
@@ -22,10 +23,14 @@ public:
 
     void insertar();
     void mostrar();
+    void jugar();
+
 };
 
 #include "inscribir.h"
 #include "mostrar.h"
+#include "jugar.h"
+
 
 int main(){
     Juego juego;
@@ -35,10 +40,11 @@ int main(){
         cout << "=== MENU ==="<<endl;
         cout << "1. Inscribir jugadores"<<endl;
         cout << "2. Mostrar jugadores"<<endl;
-        cout << "3. Salir"<<endl;
+        cout << "3. Jugar"<<endl;
+        cout << "4. Salir"<<endl;
         cout << "Opcion: ";
         cin >> opcion;
-
+//llamar funciones
         switch(opcion){
             case 1:
                 juego.insertar();
@@ -46,9 +52,12 @@ int main(){
             case 2:
                 juego.mostrar();
                 break;
+            case 3:
+                juego.jugar();
+                break;
         }
 
-    } while(opcion != 3);
+    } while(opcion != 4);
 
     return 0;
 }
