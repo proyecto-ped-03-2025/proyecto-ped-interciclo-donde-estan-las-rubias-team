@@ -24,12 +24,15 @@ public:
     void insertar();
     void mostrar();
     void jugar();
+    void reportarGanador();
+
 
 };
 
 #include "inscribir.h"
 #include "mostrar.h"
 #include "jugar.h"
+#include "ganador.h"
 
 
 int main(){
@@ -41,7 +44,9 @@ int main(){
         cout << "1. Inscribir jugadores"<<endl;
         cout << "2. Mostrar jugadores"<<endl;
         cout << "3. Jugar"<<endl;
-        cout << "4. Salir"<<endl;
+        cout << "4. Mostrar ganador"<<endl;
+        cout << "5. Salir"<<endl;
+
         cout << "Opcion: ";
         cin >> opcion;
 //llamar funciones
@@ -55,9 +60,13 @@ int main(){
             case 3:
                 juego.jugar();
                 break;
-        }
+            case 4:
+                juego.reportarGanador();
+                break;
 
-    } while(opcion != 4);
+            }
+
+    } while(opcion != 5);
 
     return 0;
 }
