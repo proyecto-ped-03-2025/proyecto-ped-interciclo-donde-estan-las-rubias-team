@@ -1,7 +1,7 @@
 #ifndef INSCRIBIR_H
 #define INSCRIBIR_H
 
-void insertar(){
+void Juego::insertar(){
     Jugador* nuevo;
     char respuesta;
 
@@ -34,7 +34,7 @@ void insertar(){
             }
         }
 
-    } while (respuesta == 's');
+    } while(respuesta == 's');
 }
 
 #endif
