@@ -1,7 +1,7 @@
 #ifndef INSCRIBIR_H
 #define INSCRIBIR_H
 
-void insertar(){
+void Juego::insertar(){
     Jugador* nuevo;
     char respuesta;
 
@@ -11,6 +11,8 @@ void insertar(){
 
         if(respuesta == 's'){
             nuevo = new Jugador;
+            nuevo->puntaje = 0;
+
 
             cout << "Nombre: ";
             cin >> nuevo->nombre;
