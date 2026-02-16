@@ -52,7 +52,15 @@ void Juego::ayuda(){
     cout << "- Muestra este menu con la informacion para ayudar al jugador"<<endl;
     cout << "----------------------------------------"<<endl;
 
-    cout << "6. SALIR"<<endl;
+    cout << "6. MOSTRAR RECURSION"<<endl;
+    cout << "- Muestra la lista de jugadores recursivamente"<<endl;
+    cout << "----------------------------------------"<<endl;
+
+    cout << "7. MOSTRAR INTEGRANTES"<<endl;
+    cout << "- Muestra los integrantes del equipo"<<endl;
+    cout << "----------------------------------------"<<endl;
+
+    cout << "8. SALIR"<<endl;
     cout << "- Sale del programa"<<endl;
     cout << "----------------------------------------"<<endl;
 
