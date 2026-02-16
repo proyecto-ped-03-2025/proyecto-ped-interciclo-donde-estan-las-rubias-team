@@ -25,14 +25,16 @@ public:
     void mostrar();
     void jugar();
     void reportarGanador();
+    void ayuda();
 
 
 };
-
+//Llamado de las librerias .h
 #include "inscribir.h"
 #include "mostrar.h"
 #include "jugar.h"
 #include "ganador.h"
+#include "ayuda.h"
 
 
 int main(){
@@ -45,8 +47,8 @@ int main(){
         cout << "2. Mostrar jugadores"<<endl;
         cout << "3. Jugar"<<endl;
         cout << "4. Mostrar ganador"<<endl;
-        cout << "5. Salir"<<endl;
-
+        cout << "5. Ayuda"<<endl;
+        cout << "6. Salir"<<endl;
         cout << "Opcion: ";
         cin >> opcion;
 //llamar funciones
@@ -63,10 +65,18 @@ int main(){
             case 4:
                 juego.reportarGanador();
                 break;
-
+            case 5: 
+                juego.ayuda();
+                break;
+            case 6:
+                cout << "Nos vemos :P"<<endl;
+                break;
+            default:
+                cout << "Ingrese una opcion correcta"<<endl;
             }
 
-    } while(opcion != 5);
+    } while(opcion != 6);
+    
 
     return 0;
 }
