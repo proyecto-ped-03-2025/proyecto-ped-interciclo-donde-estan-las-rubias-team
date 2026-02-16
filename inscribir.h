@@ -8,7 +8,7 @@ void Juego::insertar()
 
     do
     {
-        cout << "¿Quieres inscribir un jugador nuevo? (s/n): ";
+        cout << "Quieres inscribir un jugador nuevo? (s/n): ";
         cin >> respuesta;
 
         if (respuesta == 's')
