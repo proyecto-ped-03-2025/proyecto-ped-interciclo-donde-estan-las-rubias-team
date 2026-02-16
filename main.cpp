@@ -23,18 +23,27 @@ public:
 
     void insertar();
     void mostrar();
+    void mostrarRecursivo(Jugador* actual, Jugador* inicio);
+    void mostrarJugadoresRecursivo();
     void jugar();
+    Jugador* getInicio();
     void reportarGanador();
     void ayuda();
 
 
 };
+Jugador* Juego::getInicio(){
+    return pInicio;
+}
+
 //Llamado de las librerias .h
 #include "inscribir.h"
 #include "mostrar.h"
+#include "recursion.h"
 #include "jugar.h"
 #include "ganador.h"
 #include "ayuda.h"
+
 
 
 int main(){
@@ -48,7 +57,8 @@ int main(){
         cout << "3. Jugar"<<endl;
         cout << "4. Mostrar ganador"<<endl;
         cout << "5. Ayuda"<<endl;
-        cout << "6. Salir"<<endl;
+        cout << "6. Mostrar recursion"<<endl;
+        cout << "7. salir"<<endl;
         cout << "Opcion: ";
         cin >> opcion;
 //llamar funciones
@@ -69,13 +79,18 @@ int main(){
                 juego.ayuda();
                 break;
             case 6:
+               juego.mostrarJugadoresRecursivo();
+                break;
+            case 7:
                 cout << "Nos vemos :P"<<endl;
                 break;
+
+
             default:
                 cout << "Ingrese una opcion correcta"<<endl;
             }
 
-    } while(opcion != 6);
+    } while(opcion != 7);
     
 
     return 0;
