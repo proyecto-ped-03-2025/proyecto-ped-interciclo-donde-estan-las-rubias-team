@@ -1,6 +1,8 @@
 #ifndef JUGAR_H
 #define JUGAR_H
 
+#include <conio.h>  
+
 void Juego::jugar()
 {
     if (pInicio == NULL || pInicio->sig == pInicio)
@@ -17,30 +19,37 @@ void Juego::jugar()
 
         while (j2 != pInicio)
         {
-
             int op1, op2;
 
             cout << "\n"
                  << j1->nombre << " vs " << j2->nombre << endl;
-            cout << "1.Piedra 2.Papel 3.Tijera\n";
+            cout << "1.Piedra  2.Papel  3.Tijera\n";
 
+            // Jugada jugador 1 (oculta)
             cout << j1->nombre << ": ";
-            cin >> op1;
-            //Validar que la opcion solo sea 1, 2 0 3
+            op1 = getch() - '0';
+            cout << "*\n";
+
             while (op1 < 1 || op1 > 3)
             {
-                cout << "Opcion incorrecta. Solo 1, 2 o 3: ";
-                cin >> op1;
+                cout << "Opcion incorrecta. Solo 1,2 o 3: ";
+                op1 = getch() - '0';
+                cout << "*\n";
             }
 
+            // Jugada jugador 2 (oculta)
             cout << j2->nombre << ": ";
-            cin >> op2;
+            op2 = getch() - '0';
+            cout << "*\n";
+
             while (op2 < 1 || op2 > 3)
             {
-                cout << "Opcion incorrecta. Solo 1, 2 o 3: ";
-                cin >> op2;
+                cout << "Opcion incorrecta. Solo 1,2 o 3: ";
+                op2 = getch() - '0';
+                cout << "*\n";
             }
-            //Puntajes    
+
+            // Puntajes
             if (op1 == op2)
             {
                 j1->puntaje++;
